@@ -2,6 +2,10 @@
 
 This project aims to build an app that lets the caller decide if the call is urgent or not. It enables the user to determine that the specific call is critical and that the person should be disrupted from whatever they might be doing.
 
+# Proposal
+[Accepted proposal and timeline](https://github.com/jaiakash/gsoc22_ccextractor_itsurgent_porposal)
+[GSoC page](https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09)
+
 ## Getting Started
 
 1. Clone the repository from GitHub:
