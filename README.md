@@ -4,6 +4,8 @@ This project aims to build an app that lets the caller decide if the call is urg
 
 # Proposal
 [Accepted proposal and timeline](https://github.com/jaiakash/gsoc22_ccextractor_itsurgent_porposal)
+
+
 [GSoC page](https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09)
 
 ## Getting Started
