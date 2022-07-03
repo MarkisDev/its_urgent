@@ -1,15 +1,15 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({Key? key}) : super(key: key);
   @override
-  _ContactPageState createState() => _ContactPageState();
+  ContactPageState createState() => ContactPageState();
 }
 
-class _ContactPageState extends State<ContactPage> {
+class ContactPageState extends State<ContactPage> {
   List<Contact>? contacts;
   @override
   void initState() {
@@ -41,17 +41,18 @@ class _ContactPageState extends State<ContactPage> {
                     ? (contacts![index].phones.first.number)
                     : "--";
                 return ListTile(
-                    leading: (contacts![index].photo == null)
-                        ? const CircleAvatar(child: Icon(Icons.person))
-                        : CircleAvatar(backgroundImage: MemoryImage(image!)),
-                    title: Text(
-                        "${contacts![index].name.first} ${contacts![index].name.last}"),
-                    subtitle: Text(num),
-                    onTap: () {
-                      if (contacts![index].phones.isNotEmpty) {
-                        launch('tel: ${num}');
-                      }
-                    });
+                  leading: (contacts![index].photo == null)
+                      ? const CircleAvatar(child: Icon(Icons.person))
+                      : CircleAvatar(backgroundImage: MemoryImage(image!)),
+                  title: Text(
+                      "${contacts![index].name.first} ${contacts![index].name.last}"),
+                  subtitle: Text(num),
+                  onTap: () {
+                    if (contacts![index].phones.isNotEmpty) {
+                      launchUrlString('tel: $num');
+                    }
+                  },
+                );
               },
             ),
     );
