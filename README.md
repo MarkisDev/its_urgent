@@ -22,7 +22,13 @@ git clone https://github.com/jaiakash/its_urgent
 cd its_urgent
 ```
 
-3. Check for Flutter setup and connected devices:
+3. Install dependencies:
+
+```bash
+flutter pub get
+``` 
+
+4. Check for Flutter setup and connected devices:
 
 ```bash
 flutter doctor
@@ -36,7 +42,7 @@ flutter run
 
 ## Contributing
 
-Whether you have some feauture requests/ideas, code improvements, refactoring, performance improvements, help is always Welcome. The more is done, better it gets.
+Whether you have some feature requests/ideas, code improvements, refactoring, performance improvements, help is always Welcome. The more is done, better it gets.
 If you found any bugs, consider opening an [issue](https://github.com/jaiakash/its_urgent/issues/new).
 Please make sure you specify the commit type when opening pull requests:
 
