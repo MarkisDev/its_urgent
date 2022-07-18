@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './screens/contacts.dart';
+import './screens/dialer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,11 +52,7 @@ class _NavigationExampleState extends State<NavigationExample> {
       ),
       body: <Widget>[
         const ContactPage(),
-        Container(
-          color: Colors.green,
-          alignment: Alignment.center,
-          child: const Text('Page 2'),
-        ),
+        const DialerPage(),
         Container(
           color: Colors.blue,
           alignment: Alignment.center,
