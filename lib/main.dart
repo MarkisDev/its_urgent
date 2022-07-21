@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './screens/contacts.dart';
-import './screens/dialer.dart';
+import 'screens/contacts.dart';
+import 'screens/dialer.dart';
+import 'screens/settings/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,11 +54,7 @@ class _NavigationExampleState extends State<NavigationExample> {
       body: <Widget>[
         const ContactPage(),
         const DialerPage(),
-        Container(
-          color: Colors.blue,
-          alignment: Alignment.center,
-          child: const Text('Page 3'),
-        ),
+        const SettingPage(),
       ][currentPageIndex],
     );
   }
