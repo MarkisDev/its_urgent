@@ -14,10 +14,17 @@ class DialerPageState extends State<DialerPage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Recent"),
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
+            const SizedBox(height: 150),
+            const Divider(
+              color: Colors.grey,
+            ),
             ListTile(
               leading: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -31,33 +38,29 @@ class DialerPageState extends State<DialerPage> {
                 ),
               ),
               trailing: SizedBox(
-                width: 80,
+                width: 35,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.ideographic,
                   children: [
                     Align(
                       alignment: Alignment.bottomRight,
-                      child: Icon(
-                        Icons.person_add,
-                        size: 35,
-                        color: HexColor('#4a90e2'),
+                      child: InkWell(
+                        onTap: () {
+                          if (display.isNotEmpty) {
+                            setState(() {
+                              display =
+                                  display.substring(0, display.length - 1);
+                            });
+                          }
+                        },
+                        child: Icon(
+                          Icons.backspace,
+                          size: 35,
+                          color: HexColor('#ec4055'),
+                        ),
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-                        if (display.isNotEmpty) {
-                          setState(() {
-                            display = display.substring(0, display.length - 1);
-                          });
-                        }
-                      },
-                      child: Icon(
-                        Icons.backspace,
-                        size: 35,
-                        color: HexColor('#ec4055'),
-                      ),
-                    )
                   ],
                 ),
               ),
@@ -65,6 +68,7 @@ class DialerPageState extends State<DialerPage> {
             const Divider(
               color: Colors.grey,
             ),
+            const SizedBox(height: 50),
             Row(
               children: [
                 dialPadButton(size, '1'),
@@ -96,8 +100,11 @@ class DialerPageState extends State<DialerPage> {
             InkWell(
               child: Container(
                 height: 80,
-                width: double.infinity,
-                color: HexColor('#2d79e6'),
+                width: 100,
+                decoration: BoxDecoration(
+                  color: HexColor('#ec4055'),
+                  borderRadius: BorderRadius.circular(40),
+                ),
                 child: const Center(
                   child: Icon(
                     Icons.call,
@@ -125,16 +132,23 @@ class DialerPageState extends State<DialerPage> {
         });
       },
       child: Container(
-        height: size.height * 0.15,
+        height: size.height * 0.1,
         width: size.width * 0.33,
-        decoration:
-            BoxDecoration(border: Border.all(color: Colors.grey, width: 0.025)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          boxShadow: [
+            BoxShadow(
+              color: HexColor('#f1a3ac'),
+              spreadRadius: -10,
+            ),
+          ],
+        ),
         child: Center(
           child: Text(
             value,
             textScaleFactor: 1.0,
             style: TextStyle(
-                color: color ?? HexColor('#5798e4'),
+                color: color ?? HexColor('#999999'),
                 fontSize: 35,
                 fontWeight: FontWeight.bold),
           ),
