@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/contacts.dart';
 import 'screens/dialer.dart';
 import 'screens/settings/settings.dart';
+import 'constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: NavigationExample());
+    return MaterialApp(
+        theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.green,
+        ),
+        home: const NavigationExample());
   }
 }
 
@@ -43,7 +49,7 @@ class _NavigationExampleState extends State<NavigationExample> {
           ),
           NavigationDestination(
             icon: Icon(Icons.dialpad),
-            label: 'Recent',
+            label: 'Dialer',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings),
