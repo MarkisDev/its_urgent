@@ -22,8 +22,9 @@ class SettingMenu extends StatelessWidget {
         style: TextButton.styleFrom(
           primary: kPrimaryColor,
           padding: const EdgeInsets.all(20),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
           backgroundColor: const Color(0xFFF5F6F9),
         ),
         onPressed: press,
@@ -35,7 +36,9 @@ class SettingMenu extends StatelessWidget {
               width: 22,
             ),
             const SizedBox(width: 20),
-            Expanded(child: Text(text)),
+            Expanded(
+              child: Text(text),
+            ),
             const Icon(Icons.arrow_forward),
           ],
         ),
