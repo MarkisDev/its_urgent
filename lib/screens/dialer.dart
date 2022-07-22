@@ -21,7 +21,7 @@ class DialerPageState extends State<DialerPage> {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 150),
+            const SizedBox(height: 120),
             const Divider(
               color: Colors.grey,
             ),
@@ -31,14 +31,14 @@ class DialerPageState extends State<DialerPage> {
                 child: Text(
                   display,
                   textScaleFactor: 1.0,
-                  style: const TextStyle(
-                      fontSize: 35,
-                      color: Colors.black,
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: HexColor('#12b562'),
                       fontWeight: FontWeight.bold),
                 ),
               ),
               trailing: SizedBox(
-                width: 35,
+                width: 26,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.ideographic,
@@ -54,10 +54,12 @@ class DialerPageState extends State<DialerPage> {
                             });
                           }
                         },
-                        child: Icon(
-                          Icons.backspace,
-                          size: 35,
-                          color: HexColor('#ec4055'),
+                        child: Center(
+                          child: Icon(
+                            Icons.backspace,
+                            size: 24,
+                            color: HexColor('#bfbfbf'),
+                          ),
                         ),
                       ),
                     ),
@@ -68,48 +70,48 @@ class DialerPageState extends State<DialerPage> {
             const Divider(
               color: Colors.grey,
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 5),
             Row(
               children: [
-                dialPadButton(size, '1'),
-                dialPadButton(size, '2'),
-                dialPadButton(size, '3')
+                dialPadButton(size, '1', color: HexColor('#000000')),
+                dialPadButton(size, '2', color: HexColor('#000000')),
+                dialPadButton(size, '3', color: HexColor('#000000'))
               ],
             ),
             Row(
               children: [
-                dialPadButton(size, '4'),
-                dialPadButton(size, '5'),
-                dialPadButton(size, '6')
+                dialPadButton(size, '4', color: HexColor('#000000')),
+                dialPadButton(size, '5', color: HexColor('#000000')),
+                dialPadButton(size, '6', color: HexColor('#000000'))
               ],
             ),
             Row(
               children: [
-                dialPadButton(size, '7'),
-                dialPadButton(size, '8'),
-                dialPadButton(size, '9')
+                dialPadButton(size, '7', color: HexColor('#000000')),
+                dialPadButton(size, '8', color: HexColor('#000000')),
+                dialPadButton(size, '9', color: HexColor('#000000'))
               ],
             ),
             Row(
               children: [
-                dialPadButton(size, '*', color: HexColor('#999999')),
-                dialPadButton(size, '0'),
-                dialPadButton(size, '#', color: HexColor('#999999'))
+                dialPadButton(size, '*', color: HexColor('#000000')),
+                dialPadButton(size, '0', color: HexColor('#000000')),
+                dialPadButton(size, '#', color: HexColor('#000000'))
               ],
             ),
             InkWell(
               child: Container(
-                height: 80,
-                width: 100,
+                height: 43,
+                width: 95,
                 decoration: BoxDecoration(
-                  color: HexColor('#ec4055'),
+                  color: HexColor('#12b562'),
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: const Center(
                   child: Icon(
                     Icons.call,
                     color: Colors.white,
-                    size: 40,
+                    size: 35,
                   ),
                 ),
               ),
@@ -125,7 +127,7 @@ class DialerPageState extends State<DialerPage> {
 
   Widget dialPadButton(Size size, String value, {Color? color}) {
     return InkWell(
-      highlightColor: Colors.black45,
+      highlightColor: HexColor('#d8d8d8'),
       onTap: () {
         setState(() {
           display = display + value;
@@ -138,7 +140,7 @@ class DialerPageState extends State<DialerPage> {
           borderRadius: BorderRadius.circular(50),
           boxShadow: [
             BoxShadow(
-              color: HexColor('#f1a3ac'),
+              color: HexColor('#ffffff'),
               spreadRadius: -10,
             ),
           ],
@@ -150,7 +152,7 @@ class DialerPageState extends State<DialerPage> {
             style: TextStyle(
                 color: color ?? HexColor('#999999'),
                 fontSize: 35,
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.w300),
           ),
         ),
       ),
