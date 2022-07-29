@@ -15,7 +15,7 @@ class DialerPageState extends State<DialerPage> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Recent"),
+        title: const Text("Dialer"),
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -38,7 +38,7 @@ class DialerPageState extends State<DialerPage> {
                 ),
               ),
               trailing: SizedBox(
-                width: 26,
+                width: 33,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.ideographic,
@@ -46,6 +46,14 @@ class DialerPageState extends State<DialerPage> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: InkWell(
+                        onLongPress: () {
+                          if (display.isNotEmpty) {
+                            setState(() {
+                              display = display.substring(
+                                  0, display.length - display.length);
+                            });
+                          }
+                        },
                         onTap: () {
                           if (display.isNotEmpty) {
                             setState(() {
@@ -102,7 +110,7 @@ class DialerPageState extends State<DialerPage> {
             InkWell(
               child: Container(
                 height: 43,
-                width: 95,
+                width: 105,
                 decoration: BoxDecoration(
                   color: HexColor('#12b562'),
                   borderRadius: BorderRadius.circular(40),
@@ -140,7 +148,7 @@ class DialerPageState extends State<DialerPage> {
           borderRadius: BorderRadius.circular(50),
           boxShadow: [
             BoxShadow(
-              color: HexColor('#ffffff'),
+              color: HexColor('#000000').withOpacity(0.1),
               spreadRadius: -10,
             ),
           ],
