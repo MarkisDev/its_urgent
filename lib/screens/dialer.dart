@@ -38,7 +38,7 @@ class DialerPageState extends State<DialerPage> {
                 ),
               ),
               trailing: SizedBox(
-                width: 26,
+                width: 33,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.ideographic,
@@ -46,6 +46,14 @@ class DialerPageState extends State<DialerPage> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: InkWell(
+                        onLongPress: () {
+                          if (display.isNotEmpty) {
+                            setState(() {
+                              display = display.substring(
+                                  0, display.length - display.length);
+                            });
+                          }
+                        },
                         onTap: () {
                           if (display.isNotEmpty) {
                             setState(() {
@@ -101,8 +109,8 @@ class DialerPageState extends State<DialerPage> {
             ),
             InkWell(
               child: Container(
-                height: 83,
-                width: 125,
+                height: 43,
+                width: 105,
                 decoration: BoxDecoration(
                   color: HexColor('#12b562'),
                   borderRadius: BorderRadius.circular(40),
