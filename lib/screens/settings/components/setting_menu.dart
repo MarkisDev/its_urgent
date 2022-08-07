@@ -20,7 +20,8 @@ class SettingMenu extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextButton(
         style: TextButton.styleFrom(
-          primary: kPrimaryColor,
+          // temporary fix for github actions
+          // primary: kPrimaryColor, // 'primary' is deprecated and shouldn't be used
           padding: const EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),

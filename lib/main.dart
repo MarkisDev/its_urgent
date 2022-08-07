@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'screens/contacts.dart';
 import 'screens/dialer.dart';
 import 'screens/settings/settings.dart';
-import 'constants.dart';
 
 void main() {
   runApp(const MyApp());
