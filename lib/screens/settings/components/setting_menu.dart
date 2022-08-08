@@ -21,7 +21,7 @@ class SettingMenu extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           // permanent fix for github actions
-          primary: kPrimaryColor, // 'primary' is deprecated and shouldn't be used
+          // primary: kPrimaryColor, // 'primary' is deprecated and shouldn't be used
           padding: const EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
