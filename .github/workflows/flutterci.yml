@@ -13,10 +13,9 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v1
         with:
-         flutter-version: '3.0.5'
-         channel: 'stable'
+          channel: 'stable'
       - run: flutter pub get
       - run: flutter format --set-exit-if-changed .
       - run: flutter analyze .
