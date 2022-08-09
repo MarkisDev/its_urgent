@@ -13,7 +13,6 @@ class ContactPageState extends State<ContactPage> {
   List<Contact>? contacts;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getContact();
   }
