@@ -17,11 +17,13 @@ class SettingMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
       child: TextButton(
         style: TextButton.styleFrom(
-          // permanent fix for github actions
-          primary: kPrimaryColor, // 'primary' is deprecated and shouldn't be used
+          primary: kPrimaryColor,
           padding: const EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
