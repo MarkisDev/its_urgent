@@ -9,12 +9,10 @@
 - [x] Dialer UI in the app. [Issue](https://github.com/jaiakash/its_urgent/issues/5)
 
 ## Milestone 2 (June 27 to July 12) - Done
-
 - [x] Firebase Setup
 - [x] Device setup
 
 ## Milestone 3 (July 12 to July 26) - WIP [Branch](https://github.com/jaiakash/its_urgent/tree/firbase-oauth-phone)
-
 - [ ] Phone Verification [Issue](https://github.com/jaiakash/its_urgent/issues/14)
 - [ ] Facebook and Google OAuth [Issue](https://github.com/jaiakash/its_urgent/issues/13)
 - [ ] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
