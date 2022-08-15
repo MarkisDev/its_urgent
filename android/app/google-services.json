@@ -7,6 +7,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1001031051231:android:92418fb25d815707fe866a",
+        "android_client_info": {
+          "package_name": "com.akash.its_urgent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001031051231-qe8rf9t82s9a1oc6sliauc6c49p7mn9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akash.its_urgent",
+            "certificate_hash": "8fb081ca01765fd168286e4df1328a3a82fb1f96"
+          }
+        },
+        {
+          "client_id": "1001031051231-l76hqb8qu7rg3ajflv4a2e9ktk7ogll7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9kVN3eBUZFK8fK_DKWq2rpg5x8wdKKvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001031051231-l76hqb8qu7rg3ajflv4a2e9ktk7ogll7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1001031051231-5emg1l3ppp340re4jbmrhq0n8svmlkm7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.itsUrgent"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1001031051231:android:6f3acbd73762b65cfe866a",
         "android_client_info": {
           "package_name": "com.example.its_urgent"
@@ -29,6 +73,13 @@
             {
               "client_id": "1001031051231-l76hqb8qu7rg3ajflv4a2e9ktk7ogll7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1001031051231-5emg1l3ppp340re4jbmrhq0n8svmlkm7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.itsUrgent"
+              }
             }
           ]
         }
