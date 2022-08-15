@@ -4,13 +4,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GAuthProvider extends ChangeNotifier {
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn googleSignIn = GoogleSignIn();
 
   GoogleSignInAccount? _user;
   GoogleSignInAccount? get user => _user;
 
   Future googleLogin() async {
-    final googleUser = await _googleSignIn.signIn();
+    final googleUser = await googleSignIn.signIn();
     if (googleUser == null) {
       return;
     }
@@ -24,5 +24,10 @@ class GAuthProvider extends ChangeNotifier {
 
     await FirebaseAuth.instance.signInWithCredential(credential);
     notifyListeners();
+  }
+
+  Future googleLogout() async {
+    await googleSignIn.disconnect();
+    FirebaseAuth.instance.signOut();
   }
 }
