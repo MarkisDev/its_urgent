@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'setting_menu.dart';
 import 'profile_pic.dart';
+import 'gauth.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -39,6 +40,7 @@ class Body extends StatelessWidget {
             icon: "assets/icons/Log out.svg",
             press: () {},
           ),
+          GAuth(),
         ],
       ),
     );

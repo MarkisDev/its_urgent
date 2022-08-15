@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
+import 'provider/gauth.dart';
 import 'screens/contacts.dart';
 import 'screens/dialer.dart';
 import 'screens/settings/settings.dart';
@@ -20,12 +22,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(
+      create: (context) => GAuthProvider(),
+      child: MaterialApp(
         theme: ThemeData(
           brightness: Brightness.light,
           primarySwatch: Colors.green,
         ),
-        home: const NavigationExample());
+        home: const NavigationExample(),
+      ),
+    );
   }
 }
 
