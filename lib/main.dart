@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:its_urgent/screens/login/index.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
@@ -68,12 +69,17 @@ class _NavigationExampleState extends State<NavigationExample> {
             icon: Icon(Icons.settings),
             label: 'Settings',
           ),
+          NavigationDestination(
+            icon: Icon(Icons.login),
+            label: 'Login',
+          ),
         ],
       ),
       body: <Widget>[
         const ContactPage(),
         const DialerPage(),
         const SettingPage(),
+        const LoginPage(),
       ][currentPageIndex],
     );
   }
