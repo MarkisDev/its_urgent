@@ -7,7 +7,7 @@ import 'firebase_options.dart';
 import 'provider/gauth.dart';
 import 'screens/contacts.dart';
 import 'screens/dialer.dart';
-import 'screens/settings/settings.dart';
+import 'screens/settings/index.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();

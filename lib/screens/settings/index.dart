@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 
+import 'myprofile.dart';
 import 'setting_menu.dart';
 import 'profile_pic.dart';
 import 'gauth.dart';
 
-class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+class SettingPage extends StatefulWidget {
+  const SettingPage({Key? key}) : super(key: key);
+  @override
+  SettingPageState createState() => SettingPageState();
+}
+
+class SettingPageState extends State<SettingPage> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Settings"),
+      ),
+      body: SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
@@ -18,7 +32,12 @@ class Body extends StatelessWidget {
           SettingMenu(
             text: "My Profile",
             icon: "assets/icons/User Icon.svg",
-            press: () => {},
+            press: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyProfile()),
+              )
+            },
           ),
           SettingMenu(
             text: "Notifications",
@@ -43,6 +62,7 @@ class Body extends StatelessWidget {
           GAuth(),
         ],
       ),
+    ),
     );
   }
 }
