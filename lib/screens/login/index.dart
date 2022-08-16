@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'gauth.dart';
+import 'login.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -24,14 +24,9 @@ class SettingPageState extends State<LoginPage> {
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(height: 10),
-            const Text("Name"),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Akash"),
-            ),
-            const GAuth(),
+          children: const [
+            SizedBox(height: 10),
+            LoginScreen(),
           ],
         ),
       ),

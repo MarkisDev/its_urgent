@@ -5,7 +5,7 @@ import 'package:its_urgent/screens/login/index.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
-import 'provider/gauth.dart';
+import 'provider/login.dart';
 import 'screens/contacts.dart';
 import 'screens/dialer.dart';
 import 'screens/settings/index.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => GAuthProvider(),
+      create: (context) => LoginProvider(),
       child: MaterialApp(
         theme: ThemeData(
           brightness: Brightness.light,
