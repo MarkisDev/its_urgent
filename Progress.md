@@ -16,3 +16,8 @@
 - [x] Phone Verification [Issue](https://github.com/jaiakash/its_urgent/issues/14) [PR](https://github.com/jaiakash/its_urgent/pull/20)
 - [x] Google OAuth [Issue](https://github.com/jaiakash/its_urgent/issues/13) [PR](https://github.com/jaiakash/its_urgent/pull/19)
 - [ ] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
+
+## Milestone 4 (July 26 to July 21) - WIP
+- [ ] Broascast Receiver when a call is made/recieved and appropiate notification for that.
+- [ ] Send notification when user calls a number.
+- [ ] Blog till mid term evalutation.
