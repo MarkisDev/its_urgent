@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'myprofile.dart';
 import 'setting_menu.dart';
 import 'profile_pic.dart';
-import 'gauth.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -59,7 +58,6 @@ class SettingPageState extends State<SettingPage> {
             icon: "assets/icons/Log out.svg",
             press: () {},
           ),
-          GAuth(),
         ],
       ),
     ),
