@@ -13,10 +13,22 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Functionality
   flutter_contacts: ^1.1.5
   url_launcher: ^6.1.4
+
+  # Design
+  font_awesome_flutter: ^10.1.0
   hexcolor: ^2.0.7
   flutter_svg: ^1.1.1+1
+
+  # Firebase and Google
+  firebase_core: ^1.20.1
+  firebase_auth: ^3.6.3
+  google_sign_in: ^5.4.1
+
+  # State Management
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
