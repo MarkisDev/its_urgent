@@ -12,7 +12,7 @@
 - [x] Firebase Setup
 - [x] Device setup
 
-## Milestone 3 (July 12 to July 26) - WIP [Branch](https://github.com/jaiakash/its_urgent/tree/firbase-oauth-phone)
-- [ ] Phone Verification [Issue](https://github.com/jaiakash/its_urgent/issues/14)
-- [ ] Facebook and Google OAuth [Issue](https://github.com/jaiakash/its_urgent/issues/13)
+## Milestone 3 (July 12 to July 26) - Done
+- [x] Phone Verification [Issue](https://github.com/jaiakash/its_urgent/issues/14) [PR](https://github.com/jaiakash/its_urgent/pull/20)
+- [x] Google OAuth [Issue](https://github.com/jaiakash/its_urgent/issues/13) [PR](https://github.com/jaiakash/its_urgent/pull/19)
 - [ ] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
