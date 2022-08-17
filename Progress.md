@@ -20,4 +20,4 @@
 ## Milestone 4 (July 26 to Aug 21) - WIP
 - [ ] Send notification when user calls a number. [Issue](https://github.com/jaiakash/its_urgent/issues/22)
 - [x] Message and Rating alert box when user calls a number. [PR](https://github.com/jaiakash/its_urgent/pull/25)
-- [ ] Blog till mid term evalutation.
+- [x] Blog till mid term evalutation. [Draft link](https://dev.to/akashjaiswal03/my-gsoc22-experience-with-ccextractor-35d7-temp-slug-8809384?preview=1d18f910af576ff4075d2c7a95f1e2c607240df6d1a4bdf71b869b381e09bf1fc8f0110dcd66f60b9dec74b05428db954dba5e961400adb121a636cc)
