@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../widgets/rating.dart';
 
 class DialerPage extends StatefulWidget {
   const DialerPage({Key? key}) : super(key: key);
@@ -124,7 +125,12 @@ class DialerPageState extends State<DialerPage> {
                 ),
               ),
               onTap: () async {
-                launchUrlString('tel: $display');
+                showDialog(
+                        context: context,
+                        builder: (_) => RatingDialog(
+                            name: "the number",
+                            number: display),
+                      );
               },
             )
           ],

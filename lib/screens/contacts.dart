@@ -1,7 +1,8 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+
+import '../widgets/rating.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class ContactPage extends StatefulWidget {
 
 class ContactPageState extends State<ContactPage> {
   List<Contact>? contacts;
+
   @override
   void initState() {
     super.initState();
@@ -48,7 +50,12 @@ class ContactPageState extends State<ContactPage> {
                   subtitle: Text(num),
                   onTap: () {
                     if (contacts![index].phones.isNotEmpty) {
-                      launchUrlString('tel: $num');
+                      showDialog(
+                        context: context,
+                        builder: (_) => RatingDialog(
+                            name: "${contacts![index].name.first}",
+                            number: num),
+                      );
                     }
                   },
                 );
