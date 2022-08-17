@@ -3,7 +3,7 @@
 ## Milestone 1 (June 13 to June 26) - Done
 
 - [x] Setup the repo and readme about the project. [Issue](https://github.com/jaiakash/its_urgent/issues/1)
-- [ ] ~Design of the app.~
+- [ ] ~Design of the app.~ See Screenshots
 - [x] Bottom navigation bar. [Issue](https://github.com/jaiakash/its_urgent/issues/3)
 - [x] Show user contact UI in app. [Issue](https://github.com/jaiakash/its_urgent/issues/4)
 - [x] Dialer UI in the app. [Issue](https://github.com/jaiakash/its_urgent/issues/5)
