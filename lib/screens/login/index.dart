@@ -5,10 +5,10 @@ import 'login.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
   @override
-  SettingPageState createState() => SettingPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
-class SettingPageState extends State<LoginPage> {
+class LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
