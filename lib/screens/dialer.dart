@@ -126,11 +126,10 @@ class DialerPageState extends State<DialerPage> {
               ),
               onTap: () async {
                 showDialog(
-                        context: context,
-                        builder: (_) => RatingDialog(
-                            name: "the number",
-                            number: display),
-                      );
+                  context: context,
+                  builder: (_) =>
+                      RatingDialog(name: "the number", number: display),
+                );
               },
             )
           ],
