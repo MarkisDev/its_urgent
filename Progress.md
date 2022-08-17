@@ -18,6 +18,6 @@
 - [ ] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
 
 ## Milestone 4 (July 26 to July 21) - WIP
-- [ ] Broascast receiver when a call is made or received and appropiate notification for that. [Issue](https://github.com/jaiakash/its_urgent/issues/21)
+- [ ] Broadcast receiver when a call is made or received and appropiate notification for that. [Issue](https://github.com/jaiakash/its_urgent/issues/21)
 - [ ] Send notification when user calls a number. [Issue](https://github.com/jaiakash/its_urgent/issues/22)
 - [ ] Blog till mid term evalutation.
