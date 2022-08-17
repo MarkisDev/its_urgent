@@ -1,10 +1,16 @@
-# Its Urgent
+<img src="https://user-images.githubusercontent.com/33419526/185093301-d469a5e7-57d7-49d8-bb11-efc2221184f1.png" width=1080>
+
+# Its Urgent (In Development)
 
 This project aims to build an app that lets the caller decide if the call is urgent or not. It enables the user to determine that the specific call is critical and that the person should be disrupted from whatever they might be doing.
 
+# Screenshots
+
+<img src="https://user-images.githubusercontent.com/33419526/185091519-2f1007c8-8f39-44c6-a3b1-2b5f39245ac6.png" width=250>  <img src="https://user-images.githubusercontent.com/33419526/185092735-23673629-d5a3-4fa8-8113-85a156718851.jpg" width=250>  <img src="https://user-images.githubusercontent.com/33419526/185092746-6afc551f-f28b-4354-89c3-fda744aa0ae2.png" width=250>  <img src="https://user-images.githubusercontent.com/33419526/185086198-06a99c28-bd31-4ff5-adeb-ee706d849abb.png" width=250>
+
+
 # Proposal
 [Accepted proposal and timeline](https://github.com/jaiakash/gsoc22_ccextractor_itsurgent_porposal)
-
 
 [GSoC page](https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09)
 
