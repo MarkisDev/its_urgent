@@ -15,9 +15,10 @@
 ## Milestone 3 (July 12 to July 26) - Done
 - [x] Phone Verification [Issue](https://github.com/jaiakash/its_urgent/issues/14) [PR](https://github.com/jaiakash/its_urgent/pull/20)
 - [x] Google OAuth [Issue](https://github.com/jaiakash/its_urgent/issues/13) [PR](https://github.com/jaiakash/its_urgent/pull/19)
-- [ ] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
+- [x] Show profile data on settings page [Issue](https://github.com/jaiakash/its_urgent/issues/14)
 
 ## Milestone 4 (July 26 to July 21) - WIP
 - [ ] Broadcast receiver when a call is made or received and appropiate notification for that. [Issue](https://github.com/jaiakash/its_urgent/issues/21)
 - [ ] Send notification when user calls a number. [Issue](https://github.com/jaiakash/its_urgent/issues/22)
+- [x] Message and Rating alert box when user calls a number. [PR](https://github.com/jaiakash/its_urgent/pull/25)
 - [ ] Blog till mid term evalutation.
