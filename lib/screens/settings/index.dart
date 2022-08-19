@@ -49,6 +49,7 @@ class SettingPageState extends State<SettingPage> {
                 final prefs = await SharedPreferences.getInstance();
                 if (prefs.getBool('isGoogleSignedIn')! ||
                     prefs.getBool('isPhoneSignedIn')!) {
+                  if (!mounted) return;
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -65,6 +66,7 @@ class SettingPageState extends State<SettingPage> {
                     textColor: Colors.white,
                     fontSize: 16.0,
                   );
+                  if (!mounted) return;
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -95,6 +97,7 @@ class SettingPageState extends State<SettingPage> {
               press: () async {
                 final prefs = await SharedPreferences.getInstance();
                 if (prefs.getBool('isGoogleSignedIn')!) {
+                  if (!mounted) return;
                   final provider =
                       Provider.of<LoginProvider>(context, listen: false);
                   provider.googleLogout();
@@ -106,6 +109,7 @@ class SettingPageState extends State<SettingPage> {
                     fontSize: 16.0,
                   );
                 } else if (prefs.getBool('isPhoneSignedIn')!) {
+                  if (!mounted) return;
                   final provider =
                       Provider.of<LoginProvider>(context, listen: false);
                   provider.phoneLogout();

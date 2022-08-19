@@ -20,14 +20,16 @@ class LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: const Text("Login"),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            SizedBox(height: 10),
-            LoginScreen(),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              SizedBox(height: 10),
+              LoginScreen(),
+            ],
+          ),
         ),
       ),
     );
