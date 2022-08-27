@@ -86,7 +86,7 @@ class _RatingDialogState extends State<RatingDialog> {
             TextButton(
               child: Text('Call ${widget.name}'),
               onPressed: () {
-                launchUrlString('tel: $widget.number');
+                launchUrlString('tel:${widget.number}');
                 Navigator.of(context).pop();
               },
             ),
