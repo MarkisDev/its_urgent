@@ -53,8 +53,7 @@ class ContactPageState extends State<ContactPage> {
                       showDialog(
                         context: context,
                         builder: (_) => RatingDialog(
-                            name: "${contacts![index].name.first}",
-                            number: num),
+                            name: contacts![index].name.first, number: num),
                       );
                     }
                   },

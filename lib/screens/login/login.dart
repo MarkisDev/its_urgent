@@ -121,7 +121,10 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.white, onPrimary: Colors.black),
+                    // primery is deprecated in v3.3.0
+                    backgroundColor: Colors.white,
+                    foregroundColor: Colors.black,
+                  ),
                   onPressed: () {
                     final provider =
                         Provider.of<LoginProvider>(context, listen: false);

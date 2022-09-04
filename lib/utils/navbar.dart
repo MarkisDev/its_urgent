@@ -41,7 +41,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         bottomNavigationBar: CurvedNavigationBar(
           items: _icons,
           index: currentTab,
-          height: 50.0,
+          height: 47,
           color: kPrimaryColor,
           backgroundColor: Colors.transparent,
           animationCurve: Curves.easeInOut,

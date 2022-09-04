@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:sizer/sizer.dart';
 
 import '../widgets/rating.dart';
 
@@ -22,7 +23,7 @@ class DialerPageState extends State<DialerPage> {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 120),
+            SizedBox(height: 15.h),
             const Divider(
               color: Colors.grey,
             ),
@@ -31,15 +32,15 @@ class DialerPageState extends State<DialerPage> {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   display,
-                  textScaleFactor: 1.0,
+                  textScaleFactor: 0.9.sp,
                   style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 23.sp,
                       color: HexColor('#12b562'),
                       fontWeight: FontWeight.bold),
                 ),
               ),
               trailing: SizedBox(
-                width: 33,
+                width: 7.w,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.ideographic,
@@ -66,7 +67,7 @@ class DialerPageState extends State<DialerPage> {
                         child: Center(
                           child: Icon(
                             Icons.backspace,
-                            size: 24,
+                            size: 7.w,
                             color: HexColor('#bfbfbf'),
                           ),
                         ),
@@ -79,7 +80,7 @@ class DialerPageState extends State<DialerPage> {
             const Divider(
               color: Colors.grey,
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 0.8.h),
             Row(
               children: [
                 dialPadButton(size, '1', color: HexColor('#000000')),
@@ -110,17 +111,17 @@ class DialerPageState extends State<DialerPage> {
             ),
             InkWell(
               child: Container(
-                height: 43,
-                width: 105,
+                height: 6.9.h,
+                width: 13.h,
                 decoration: BoxDecoration(
                   color: HexColor('#12b562'),
                   borderRadius: BorderRadius.circular(40),
                 ),
-                child: const Center(
+                child: Center(
                   child: Icon(
                     Icons.call,
                     color: Colors.white,
-                    size: 35,
+                    size: 30.sp,
                   ),
                 ),
               ),
@@ -164,7 +165,7 @@ class DialerPageState extends State<DialerPage> {
             textScaleFactor: 1.0,
             style: TextStyle(
                 color: color ?? HexColor('#999999'),
-                fontSize: 35,
+                fontSize: 25.sp,
                 fontWeight: FontWeight.w300),
           ),
         ),

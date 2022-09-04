@@ -23,7 +23,7 @@ class SettingMenu extends StatelessWidget {
       ),
       child: TextButton(
         style: TextButton.styleFrom(
-          primary: kPrimaryColor,
+          foregroundColor: kPrimaryColor,
           padding: const EdgeInsets.all(20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
