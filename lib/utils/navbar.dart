@@ -5,6 +5,7 @@ import 'package:its_urgent/screens/contacts.dart';
 import 'package:its_urgent/screens/dialer.dart';
 import 'package:its_urgent/screens/login/index.dart';
 import 'package:its_urgent/screens/settings/index.dart';
+import 'package:sizer/sizer.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -18,10 +19,22 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   // icons for the bottom navigation bar
   final List<Widget> _icons = [
-    const Icon(Icons.phone),
-    const Icon(Icons.contacts),
-    const Icon(Icons.settings),
-    const Icon(Icons.person),
+    Icon(
+      Icons.phone,
+      size: 18.sp,
+    ),
+    Icon(
+      Icons.contacts,
+      size: 18.sp,
+    ),
+    Icon(
+      Icons.settings,
+      size: 18.sp,
+    ),
+    Icon(
+      Icons.person,
+      size: 18.sp,
+    ),
   ];
 
   // index for navigate to the page
@@ -41,7 +54,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         bottomNavigationBar: CurvedNavigationBar(
           items: _icons,
           index: currentTab,
-          height: 47,
+          height: 37.sp,
           color: kPrimaryColor,
           backgroundColor: Colors.transparent,
           animationCurve: Curves.easeInOut,

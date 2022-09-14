@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class RatingDialog extends StatefulWidget {
@@ -18,7 +19,7 @@ class _RatingDialogState extends State<RatingDialog> {
     return InkWell(
       child: Icon(
         Icons.star,
-        size: 23.0,
+        size: 19.sp,
         color: _stars >= starCount ? Colors.orange : Colors.grey,
       ),
       onTap: () {
@@ -33,10 +34,15 @@ class _RatingDialogState extends State<RatingDialog> {
   Widget build(BuildContext context) {
     return AlertDialog(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(20.sp),
       ),
-      title: const Center(
-        child: Text('Add message and call rating '),
+      title: Center(
+        child: Text(
+          'Add message and call rating ',
+          style: TextStyle(
+            fontSize: 15.sp,
+          ),
+        ),
       ),
       content: Wrap(
         children: [
@@ -54,15 +60,25 @@ class _RatingDialogState extends State<RatingDialog> {
                 ),
                 maxLines: 3,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 17.sp),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text("Casual Call"),
-                  Text("Urgent Call"),
+                children: [
+                  Text(
+                    "Casual Call",
+                    style: TextStyle(
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                  Text(
+                    "Urgent Call",
+                    style: TextStyle(
+                      fontSize: 13.sp,
+                    ),
+                  ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 17.sp),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -78,13 +94,23 @@ class _RatingDialogState extends State<RatingDialog> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child: Text(
+                'Cancel',
+                style: TextStyle(
+                  fontSize: 12.7.sp,
+                ),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('Call ${widget.name}'),
+              child: Text(
+                'Call ${widget.name}',
+                style: TextStyle(
+                  fontSize: 12.7.sp,
+                ),
+              ),
               onPressed: () {
                 launchUrlString('tel:${widget.number}');
                 Navigator.of(context).pop();

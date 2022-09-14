@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import 'login.dart';
 
@@ -17,6 +18,7 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text("Login"),
       ),
@@ -25,9 +27,9 @@ class LoginPageState extends State<LoginPage> {
           alignment: Alignment.center,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              SizedBox(height: 10),
-              LoginScreen(),
+            children: [
+              SizedBox(height: 1.5.h),
+              const LoginScreen(),
             ],
           ),
         ),

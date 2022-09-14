@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../provider/login.dart';
 import '../login/index.dart';
@@ -38,10 +39,10 @@ class SettingPageState extends State<SettingPage> {
         title: const Text("Settings"),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 2.sp),
         child: Column(
           children: [
-            const SizedBox(height: 20),
+            SizedBox(height: 2.h),
             SettingMenu(
               text: "My Profile",
               icon: "assets/icons/User Icon.svg",

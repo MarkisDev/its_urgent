@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import '../settings/index.dart';
 import '../../provider/login.dart';
@@ -36,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return ChangeNotifierProvider(
       create: (context) => LoginProvider(),
       child: Container(
-        margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+        margin: const EdgeInsets.only(left: 20, right: 20),
         child: Column(
           children: [
             Image.asset("assets/images/hey.png"),
@@ -53,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               keyboardType: TextInputType.name,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 2.5.h),
             TextField(
               controller: emailController,
               decoration: const InputDecoration(
@@ -67,16 +68,16 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               keyboardType: TextInputType.emailAddress,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 2.5.h),
             TextField(
               controller: phoneController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 hintText: 'Phone Number',
                 labelText: 'Enter the phone number',
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 prefix: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text('+91'),
+                  padding: EdgeInsets.symmetric(horizontal: 2.sp),
+                  child: const Text('+91'),
                 ),
               ),
               maxLength: 10,
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 keyboardType: TextInputType.number,
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 5.sp),
             ElevatedButton(
               onPressed: () {
                 if (otpVisibility) {
@@ -115,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 5.sp),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -131,22 +132,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     provider.googleLogin();
                   },
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Image(
-                          image: AssetImage("assets/icons/g-logo.png"),
-                          height: 18,
-                          width: 24,
+                          image: const AssetImage("assets/icons/g-logo.png"),
+                          height: 4.h,
+                          width: 6.7.w,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 10, right: 8),
+                          padding: EdgeInsets.only(left: 4.sp, right: 4.sp),
                           child: Text(
                             'Sign in',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 16.sp,
                               color: Colors.black54,
                               fontWeight: FontWeight.w600,
                             ),
@@ -191,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
         timeInSecForIosWeb: 1,
         backgroundColor: Colors.red,
         textColor: Colors.white,
-        fontSize: 16.0,
+        fontSize: 10.sp,
       );
     }
   }
@@ -220,7 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
             timeInSecForIosWeb: 1,
             backgroundColor: Colors.red,
             textColor: Colors.white,
-            fontSize: 16.0,
+            fontSize: 10.sp,
           );
           Navigator.pushReplacement(
             context,
@@ -236,7 +237,7 @@ class _LoginScreenState extends State<LoginScreen> {
             timeInSecForIosWeb: 1,
             backgroundColor: Colors.red,
             textColor: Colors.white,
-            fontSize: 16.0,
+            fontSize: 10.sp,
           );
         }
       },
