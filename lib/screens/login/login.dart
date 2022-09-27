@@ -25,11 +25,35 @@ class _LoginScreenState extends State<LoginScreen> {
   User? user;
   String verificationID = "";
 
-  bool allDetailesFilled() {
-    return phoneController.text.isNotEmpty &&
-        nameController.text.isNotEmpty &&
-        emailController.text.isNotEmpty &&
-        phoneController.text.length == 10;
+  void showErrorToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 10.sp,
+    );
+  }
+
+  bool allFieldsValidated() {
+    if (phoneController.text.isEmpty ||
+        nameController.text.isEmpty ||
+        emailController.text.isEmpty) {
+      showErrorToast('Please fill all the fields!');
+      return false;
+    } else if (!RegExp(
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(emailController.text)) {
+      showErrorToast('Please enter a valid email!');
+      return false;
+    } else if (!RegExp(r"(^(?:[+0]9)?[0-9]{10,12}$)")
+        .hasMatch(phoneController.text)) {
+      showErrorToast('Please enter a valid phone number!');
+      return false;
+    }
+    return true;
   }
 
   @override
@@ -166,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void loginWithPhone() async {
-    if (allDetailesFilled()) {
+    if (allFieldsValidated()) {
       auth.verifyPhoneNumber(
         phoneNumber: "+91${phoneController.text}",
         verificationCompleted: (PhoneAuthCredential credential) async {
@@ -183,16 +207,6 @@ class _LoginScreenState extends State<LoginScreen> {
           setState(() {});
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
-      );
-    } else {
-      Fluttertoast.showToast(
-        msg: "Please fill all the details",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
-        fontSize: 10.sp,
       );
     }
   }
