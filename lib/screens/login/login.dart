@@ -146,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
+                    foregroundColor: Colors.green,
                   ),
                   onPressed: () {
                     final provider =
