@@ -9,7 +9,7 @@ class RatingDialog extends StatefulWidget {
   final String name;
 
   @override
-  _RatingDialogState createState() => _RatingDialogState();
+  State<RatingDialog> createState() => _RatingDialogState();
 }
 
 class _RatingDialogState extends State<RatingDialog> {
