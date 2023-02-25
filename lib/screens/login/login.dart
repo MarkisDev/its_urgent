@@ -11,7 +11,7 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
@@ -146,9 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    // primery is deprecated in v3.3.0
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
+                    foregroundColor: Colors.green,
                   ),
                   onPressed: () {
                     final provider =
@@ -171,8 +169,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             'Sign in',
                             style: TextStyle(
-                              fontSize: 16.sp,
-                              color: Colors.black54,
+                              fontSize: 10.sp,
+                              color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
